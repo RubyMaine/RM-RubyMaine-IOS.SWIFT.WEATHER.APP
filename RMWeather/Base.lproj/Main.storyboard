@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RMWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIB-Zf-bhA">
+                                <rect key="frame" x="189.66666666666666" y="83" width="14" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weather" translatesAutoresizingMaskIntoConstraints="NO" id="tsJ-pP-ZuO">
+                                <rect key="frame" x="121.66666666666669" y="173" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="3Mb-E2-MUz"/>
+                                    <constraint firstAttribute="width" constant="150" id="xMN-HU-88X"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6R-M8-14f">
+                                <rect key="frame" x="127.66666666666669" y="409" width="138" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Узнать погоду"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AIB-Zf-bhA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="BId-rg-giV"/>
+                            <constraint firstItem="B6R-M8-14f" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Pfx-4V-7IC"/>
+                            <constraint firstItem="B6R-M8-14f" firstAttribute="top" secondItem="tsJ-pP-ZuO" secondAttribute="bottom" constant="86" id="SB1-z0-85C"/>
+                            <constraint firstItem="tsJ-pP-ZuO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cIb-xh-EcS"/>
+                            <constraint firstItem="AIB-Zf-bhA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="w4Q-Pb-ANI"/>
+                            <constraint firstItem="tsJ-pP-ZuO" firstAttribute="top" secondItem="AIB-Zf-bhA" secondAttribute="bottom" constant="54" id="yww-b6-5XW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="getWeatherButton" destination="B6R-M8-14f" id="RbX-Ai-pwt"/>
+                        <outlet property="weatherLable" destination="AIB-Zf-bhA" id="e60-re-Tjc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="weather" width="800" height="800"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
